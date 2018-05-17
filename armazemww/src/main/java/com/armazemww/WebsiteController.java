@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WebsiteController {
 
-	@RequestMapping("/website")
+	@RequestMapping("/armazemww")
 	public String website() {
 		return "website";
+	}
+	
+	@RequestMapping("/inicio")
+	public String inicio() {
+		return "inicio";
 	}
 }

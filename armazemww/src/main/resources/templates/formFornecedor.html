@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<head>
+	<title>Fornecedor</title>
+	
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+</head>
+<body>
+	
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons">account_box</i>Fornecedor</a>
+    </div>
+  </nav>
+  
+	<form class="container" method="post">
+		<div class="row">
+			<div class="input-field col s6">
+	          <input id="nome" type="text" name="nome"value="" class="validate">
+	          <label for="nome">Nome do Fornecedor</label>
+	        </div>
+	        <div class="input-field col s6">
+		       <i class="material-icons prefix">phone</i>
+		       <input id="contacto" type="tel" name="contacto" value="" class="validate">
+		       <label for="contacto">Contacto</label>
+		     </div>
+		</div>
+        <div class="row">
+	        <div class="input-field col s6">
+	        	<input id="endereco" type="text" name="endereco" value="" class="validate">
+	        	<label for="endereco">Endereco</label>
+	        </div>
+	        <div class="input-field col s6">
+            	<input id="email" type="email" name="email" value="" class="validate">
+            	<label for="email" data-error="wrong" data-success="right">Email</label>
+          	</div>
+	    </div>
+		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
+	</form>
+	
+	<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	
+</body>
+
+</html>

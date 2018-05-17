@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<head>
+	<title>Cadastrar Usuario</title>
+	
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+</head>
+<body>
+	
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons">account_box</i>Cadastro de Usuario</a>
+    </div>
+  </nav>
+  
+	<form class="container" method="post">
+		<div class="row">
+			<div class="input-field col s6">
+	          <input id="nome" type="text" class="validate">
+	          <label for="nome">Nome do Usuario</label>
+	        </div>
+	        <div class="input-field col s6">
+			    <select>
+			      <option value="" disabled selected>Marque a categoria</option>
+			      <option value="Gerente">Gerente</option>
+			      <option value="Encarregado">Encarregado</option>
+			      <option value="Assistente">Assistente</option>
+			    </select>
+			    <label>Categoria do Usuario</label>
+			</div>
+		</div>
+        <div class="row">
+	        <div class="input-field col s6">
+	          <input id="senha" type="password" class="validate">
+	          <label for="senha">Senha</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="confirmar" type="password" class="validate">
+	          <label for="confirmar">Confirmar a senha</label>
+	        </div>
+	    </div>
+	    <p>
+	      <input type="checkbox" id="test5" />
+	      <label for="test5">Selecione se todos os dados estao correctos.</label>
+	    </p>
+		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
+	</form>
+	
+	<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      
+      <script type="text/javascript">
+      	$(document).ready(function() {
+    	    $('select').material_select();
+    	  });
+      </script>
+	
+</body>
+
+</html>
