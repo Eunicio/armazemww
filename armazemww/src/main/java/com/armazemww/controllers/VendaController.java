@@ -1,36 +1,28 @@
 package com.armazemww.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.armazemww.models.Fardo;
-import com.armazemww.models.Fornecedor;
-import com.armazemww.repository.FardoRepository;
-import com.armazemww.repository.FornecedorRepository;
 
 @Controller
-public class FornecedorController {
-
+public class VendaController {
+	/*
 	@Autowired
 	private FornecedorRepository fr;
 	
 	@Autowired
 	private FardoRepository far;
-	
-	@RequestMapping(value="/fornecedor", method=RequestMethod.GET)
+	*/
+	@RequestMapping(value="/venda", method=RequestMethod.GET)
 	public String formFornecedor() {
-		return "formFornecedor";
+		return "formVenda";
 	}
-	
-	@RequestMapping(value="/fornecedor", method=RequestMethod.POST)
-	public String formFornecedor(Fornecedor fornecedor) {
-		fr.save(fornecedor);
+	/*
+	@RequestMapping(value="/venda", method=RequestMethod.POST)
+	public String formFornecedor(Venda venda) {
+		fr.save(venda);
 		
-		return "redirect:/fornecedor";
+		return "redirect:/venda";
 	}
 	
 	@RequestMapping("/fornecedores")

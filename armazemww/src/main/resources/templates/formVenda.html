@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<head>
+	<title>Venda</title>
+	
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+</head>
+<body>
+	
+	<nav>
+    	<div class="nav-wrapper">
+      		<a href="#" class="brand-logo"><i class="material-icons">add_shopping_cart</i>Venda</a>
+    	</div>
+ 	</nav>
+ 	<h1>
+ 		<a href="/menu" class="waves-effect waves-light btn">
+ 			<i class="material-icons">home</i>
+ 		</a>
+ 		<a href="/fornecedores" class="waves-effect waves-light btn">
+ 			<i class="material-icons">format_list_bulleted</i>
+ 			Lista de Fornecedores
+ 		</a>
+ 	</h1>
+ 	
+ 	<form class="container" method="post">
+	 	<fieldset class="row"><legend>Adicionar Itens</legend>
+	 		<div class="input-field col s6">
+	          <input id="barras" type="text" name="barras"value="" class="validate">
+	          <label for="barras">Codigo de Barras</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="peca" type="text" name="peca"value="" class="validate">
+	          <label for="peca">Tipo de Peca</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="quant" type="text" name="quant"value="" class="validate">
+	          <label for="quant">Quantidade de Pecas</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="preco" type="text" name="preco" value="" class="validate">
+	          <label for="preco">Preco</label>
+	        </div>
+	        <button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">add</i>Adicionar</button>
+	        <button class="waves-effect waves-light btn" type="reset"><i class="material-icons left">cancel</i>Cancelar</button>
+	 	</fieldset>	 	
+	 	<fieldset class="row"><legend>Fardos Disponiveis</legend>
+	 		<table>
+				<thead>
+					<tr>
+						<th>Codigo de Barras</th>
+						<th>Tipo de Peca</th>
+						<th>Peco Unitario</th>
+						<th>Quantidade</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>000 111 000</td>
+						<td>Calsas Jeans</td>
+						<td>12000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>000 111 001</td>
+						<td>Camisetes</td>
+						<td>10000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>000 111 010</td>
+						<td>Casacos</td>
+						<td>11000</td>
+						<td>10</td>
+					</tr>
+					<!-- 
+					<tr th:each="convidado : ${convidados}">
+						<td><span th:text="${convidado.nomeConvidado}"></span></td>
+						<td><span th:text="${convidado.rg}"></span></td>
+						<td><a href="/cadastrarEvento" class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}">
+				        	<i class="material-icons left">delete</i></a></td>
+					</tr> -->
+				</tbody>
+			</table>
+	 	</fieldset>
+	 	
+	 </form>
+  
+	<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	
+</body>
+
+</html>

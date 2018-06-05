@@ -4,3 +4,41 @@
 	padding-left: 20px;
 	margin-bottom: 10px;
 }
+
+#container{
+	width:600px;
+	margin:0 auto;
+}
+#left{
+	float:left;
+	width:130px;
+}
+#content{
+	float:right;
+	width:450px;
+}
+#footer{
+	clear:both;
+}
+#content > #principal{
+	float:left;
+	width:340px;
+}
+#content > #featured{
+	float:right;
+	width:100px;
+}
+#header{
+	height:80px;
+	backgroundcolor: #FA8072;
+}
+li > ul{
+	position:right;
+	left:126px;
+	top:-1px;
+	color:black;
+	display:none;
+}
+li:hover > ul{
+	display:block;
+}

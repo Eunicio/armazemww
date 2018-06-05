@@ -6,5 +6,5 @@ import com.armazemww.models.Fornecedor;
 
 public interface FornecedorRepository extends CrudRepository<Fornecedor, String> {
 
-	
+	Fornecedor findByCodigo(long codigo);
 }

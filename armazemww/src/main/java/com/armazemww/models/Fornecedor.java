@@ -1,11 +1,13 @@
 package com.armazemww.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Fornecedor implements Serializable {
@@ -20,6 +22,9 @@ public class Fornecedor implements Serializable {
 	private String contacto;
 	private String endereco;
 	private String email;
+	
+	@OneToMany
+	private List<Fardo> fardos;
 	
 	public long getCodigo() {
 		return codigo;
