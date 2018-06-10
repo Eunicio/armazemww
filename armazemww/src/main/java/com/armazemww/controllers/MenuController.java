@@ -8,6 +8,6 @@ public class MenuController {
 
 	@RequestMapping("/menu")
 	public String formLogin() {
-		return "menu";
+		return "login";
 	}
 }
